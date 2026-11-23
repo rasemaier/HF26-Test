@@ -1,0 +1,14 @@
+# Automatischer Check: Bei jedem Push wird geprüft, ob die Aufgaben erfüllt sind.
+# Grüner Haken = fertig. Bitte diese Datei nicht ändern.
+name: check
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    uses: rasemaier/HF26/.github/workflows/check.yml@main
